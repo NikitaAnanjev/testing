@@ -1,3 +1,48 @@
+body {
+    margin: 0;
+    background: #b66a24;
+}
+
+.section {
+    perspective: 1000px;
+}
+
+.container {
+    width: 680px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;*/
+    transition: 1s;
+    transform: rotateX(55deg) rotateY(10deg) rotateZ(-40deg);
+    transform-style: preserve-3d ;
+}
+.container-original{
+    transform: rotate(0);
+}
+img {
+    width: 100%;
+}
+
+.card {
+    width: 200px;
+    margin: 10px;
+    transition: .3s;
+}
+.card:hover{
+    cursor: cell;
+    transform: translateZ(20px);
+    -webkit-box-shadow: inset 10px 10px 59px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 10px 10px 59px 5px rgba(0,0,0,0.75);
+    box-shadow: inset 10px 10px 59px 5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 59px 5px rgba(0,0,0,0.37);
+    -moz-box-shadow: 10px 10px 59px 5px rgba(0,0,0,0.37);
+    box-shadow: 10px 10px 59px 5px rgba(0,0,0,0.37);
+}
+
+/*END CARDS ANIMATION*/
 .menu {
     position: fixed;
     left: 0;
@@ -15,7 +60,7 @@
 
 .app-menu {
     background-color: #fff;
-    color: #fff;
+    color: #ff9135;
     position: relative;
     max-width: 400px;
     width: 90%;
@@ -39,7 +84,7 @@
     transition: all 130ms ease-in;
 }
 
-.menu--visible.menu--animatable  .app-menu {
+.menu--visible.menu--animatable .app-menu {
     transition: all 330ms ease-out;
 }
 
@@ -51,11 +96,11 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     opacity: 0;
     will-change: opacity;
     pointer-events: none;
-    transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
+    transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
 }
 
 .menu--visible.menu:after {
@@ -70,8 +115,8 @@ body {
 }
 
 .layout {
-    width: 375px;
-    height: 667px;
+    width: 100%;
+    height: 100vh;
     background-color: #f5f5f5;
     position: relative;
 }
@@ -81,11 +126,15 @@ body {
 }
 
 .menu-icon {
-    content: "Menu";
-    color: #fff;
+
+    color: #111111;
     background-color: #666;
     width: 40px;
     height: 40px;
+}
+
+.menu-icon::after {
+    content: 'Menu';
 }
 
 .app-menu {

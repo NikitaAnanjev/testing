@@ -16,3 +16,8 @@ var oppMenu = document.querySelector(".menu-icon");
 myMenu.addEventListener("transitionend", OnTransitionEnd, false);
 oppMenu.addEventListener("click", toggleClassMenu, false);
 myMenu.addEventListener("click", toggleClassMenu, false);
+
+
+$('.card').on('click', function () {
+    $('.container').toggleClass('container-original');
+})
