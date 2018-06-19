@@ -21,16 +21,59 @@ body {
     position: relative;
 }
 
- span {
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+    margin-top: -1px;
+    margin-left: -10px;
     position: absolute;
     width: 20px;
     height: 2px;
     top: 50%;
+    left: 50%;
     background-color: #2B81AF;
-
 }
 
+.menu-btn span::before,
+.menu-btn span::after {
+    content: '';
+    display: block;
+    transition: .2s;
+}
+
+.menu-btn span::before {
+    transform: translateY(-5px);
+}
+
+.menu-btn span::after {
+    transform: translateY(5px);
+}
+/*animation X*/
+/*.menu-btn_active span{*/
+    /*height: 0;*/
+/*}*/
+/*.menu-btn_active span:before {*/
+    /*transform: rotate(45deg);*/
+    /**/
+/*}*/
+/*.menu-btn_active span:after {*/
+    /*transform: rotate(-45deg);*/
+/*}*/
+
+/*animation arrow left*/
+
+.menu-btn_active span:before {
+    width: 10px;
+    transform: rotate(-35deg);
+    transform-origin: left bottom;
+}
+.menu-btn_active span:after {
+    width: 10px;
+    transform: rotate(35deg);
+    transform-origin: left top;
+}
 /*Menu burger end*/
+
 .section {
     perspective: 1000px;
 }
